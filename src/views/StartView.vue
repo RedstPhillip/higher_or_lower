@@ -6,6 +6,7 @@ import { useSpielStore } from '@/stores/spielStore'
 
 const router = useRouter()
 const store = useSpielStore()
+const basis = import.meta.env.BASE_URL
 
 const kategorien = ref([])
 const isLoading = ref(true)
@@ -37,6 +38,18 @@ function spielen(kategorie) {
     <div class="blob blob-rot"></div>
 
     <header class="hero">
+      <!-- zwei schwebende Beispiel-Karten (nur Deko, nur auf großen Bildschirmen) -->
+      <div class="vorschau vorschau-links" aria-hidden="true">
+        <img :src="basis + 'bilder/staedte/london.webp'" alt="" />
+        <b>London</b>
+        <span>8.866.000</span>
+      </div>
+      <div class="vorschau vorschau-rechts" aria-hidden="true">
+        <img :src="basis + 'bilder/staedte/tokio.webp'" alt="" />
+        <b>Tokio</b>
+        <span>?</span>
+      </div>
+
       <p class="label">SWP · 4BWHII</p>
       <h1 class="titel">
         <span class="wort">Higher <span class="pfeil hoch">▲</span></span>
@@ -50,7 +63,10 @@ function spielen(kategorie) {
     </header>
 
     <section class="kategorien">
-      <div v-if="isLoading" class="status"><div class="spinner"></div></div>
+      <!-- Platzhalter-Karten, solange geladen wird -->
+      <template v-if="isLoading">
+        <div v-for="n in 4" :key="n" class="karte skeleton"></div>
+      </template>
 
       <div v-else-if="errorMessage" class="status">
         <p>{{ errorMessage }}</p>
@@ -95,10 +111,11 @@ function spielen(kategorie) {
 .start {
   position: relative;
   min-height: 100vh;
-  padding: 64px 24px 40px;
-  max-width: 1200px;
+  padding: clamp(40px, 8vh, 96px) clamp(16px, 3vw, 40px) 40px;
+  max-width: 1320px;
   margin: 0 auto;
   isolation: isolate;
+  overflow-x: clip;
 }
 
 /* weiche Farbflecken im Hintergrund */
@@ -130,8 +147,67 @@ function spielen(kategorie) {
 }
 
 .hero {
+  position: relative;
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: clamp(32px, 7vh, 72px);
+}
+
+/* Deko-Karten links und rechts vom Titel */
+.vorschau {
+  position: absolute;
+  top: 150px;
+  display: none;
+  width: 140px;
+  height: 176px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.9);
+  border: 1px solid var(--linie);
+}
+.vorschau img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+.vorschau b,
+.vorschau span {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-family: var(--schrift-titel);
+}
+.vorschau b {
+  margin-top: 56px;
+  font-size: 1.2rem;
+}
+.vorschau span {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gelb);
+}
+.vorschau-links {
+  left: 0;
+  rotate: -9deg;
+  animation: wippen 6s ease-in-out infinite;
+}
+.vorschau-rechts {
+  right: 0;
+  rotate: 8deg;
+  animation: wippen 6s -3s ease-in-out infinite;
+}
+@keyframes wippen {
+  50% {
+    translate: 0 -14px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .vorschau {
+    display: block;
+  }
 }
 
 .label {
@@ -204,10 +280,35 @@ function spielen(kategorie) {
 }
 
 /* Kategorie-Karten */
+/* 4 Spalten am PC, 2 am Tablet, 1 am Handy */
 .kategorien {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px, 1.6vw, 24px);
+}
+@media (max-width: 1000px) {
+  .kategorien {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .kategorien {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(100deg, var(--bg-hell) 30%, #22222e 50%, var(--bg-hell) 70%);
+  background-size: 300% 100%;
+  animation: schimmern 1.4s linear infinite;
+}
+@keyframes schimmern {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
 }
 
 .status {
@@ -284,7 +385,7 @@ function spielen(kategorie) {
 }
 
 .karte h2 {
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
   font-weight: 800;
 }
 
@@ -359,9 +460,6 @@ kbd {
 }
 
 @media (max-width: 600px) {
-  .start {
-    padding: 40px 16px 32px;
-  }
   .karte {
     aspect-ratio: 16 / 10;
   }
