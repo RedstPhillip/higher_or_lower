@@ -145,5 +145,47 @@
     "wert": 3604030,
     "bild": "bilder/staedte/dubai.webp",
     "quelle": "https://en.wikipedia.org/wiki/Dubai"
+  },
+  {
+    "id": "madrid",
+    "name": "Madrid",
+    "wert": 3416771,
+    "bild": "bilder/staedte/madrid.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Madrid"
+  },
+  {
+    "id": "los-angeles",
+    "name": "Los Angeles",
+    "wert": 3820914,
+    "bild": "bilder/staedte/los-angeles.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Los_Angeles"
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "wert": 12442373,
+    "bild": "bilder/staedte/mumbai.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mumbai"
+  },
+  {
+    "id": "singapur",
+    "name": "Singapur",
+    "wert": 5917600,
+    "bild": "bilder/staedte/singapur.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Singapore"
+  },
+  {
+    "id": "kopenhagen",
+    "name": "Kopenhagen",
+    "wert": 660842,
+    "bild": "bilder/staedte/kopenhagen.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Copenhagen"
+  },
+  {
+    "id": "venedig",
+    "name": "Venedig",
+    "wert": 250369,
+    "bild": "bilder/staedte/venedig.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Venice"
   }
 ]

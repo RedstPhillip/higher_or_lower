@@ -152,5 +152,47 @@
     "wert": 27800,
     "bild": "bilder/suchanfragen/schwimmbad.webp",
     "quelle": "https://en.wikipedia.org/wiki/Swimming_pool"
+  },
+  {
+    "id": "eis",
+    "name": "Eis",
+    "wert": 88000,
+    "bild": "bilder/suchanfragen/eis.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Ice_cream"
+  },
+  {
+    "id": "lasagne",
+    "name": "Lasagne",
+    "wert": 40000,
+    "bild": "bilder/suchanfragen/lasagne.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Lasagna"
+  },
+  {
+    "id": "vulkan",
+    "name": "Vulkan",
+    "wert": 18100,
+    "bild": "bilder/suchanfragen/vulkan.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Volcano"
+  },
+  {
+    "id": "hamster",
+    "name": "Hamster",
+    "wert": 27000,
+    "bild": "bilder/suchanfragen/hamster.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Golden_hamster"
+  },
+  {
+    "id": "palatschinken",
+    "name": "Palatschinken",
+    "wert": 33000,
+    "bild": "bilder/suchanfragen/palatschinken.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Pancake"
+  },
+  {
+    "id": "snowboard",
+    "name": "Snowboard",
+    "wert": 9900,
+    "bild": "bilder/suchanfragen/snowboard.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Snowboarding"
   }
 ]

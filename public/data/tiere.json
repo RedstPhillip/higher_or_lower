@@ -159,5 +159,54 @@
     "wert": 300,
     "bild": "bilder/tiere/braunbaer.webp",
     "quelle": "https://en.wikipedia.org/wiki/Brown_bear"
+  },
+  {
+    "id": "zebra",
+    "name": "Zebra",
+    "wert": 350,
+    "bild": "bilder/tiere/zebra.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Plains_zebra"
+  },
+  {
+    "id": "dromedar",
+    "name": "Dromedar",
+    "wert": 480,
+    "bild": "bilder/tiere/dromedar.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Dromedary"
+  },
+  {
+    "id": "elch",
+    "name": "Elch",
+    "wert": 470,
+    "bild": "bilder/tiere/elch.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Moose"
+  },
+  {
+    "id": "wolf",
+    "name": "Wolf",
+    "wert": 40,
+    "bild": "bilder/tiere/wolf.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Wolf"
+  },
+  {
+    "id": "fuchs",
+    "name": "Rotfuchs",
+    "wert": 7,
+    "bild": "bilder/tiere/fuchs.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Red_fox"
+  },
+  {
+    "id": "uhu",
+    "name": "Uhu",
+    "wert": 3,
+    "bild": "bilder/tiere/uhu.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Eurasian_eagle-owl"
+  },
+  {
+    "id": "delfin",
+    "name": "Großer Tümmler",
+    "wert": 150,
+    "bild": "bilder/tiere/delfin.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Common_bottlenose_dolphin"
   }
 ]

@@ -131,5 +131,47 @@
     "wert": 1281,
     "bild": "bilder/berge/vesuv.webp",
     "quelle": "https://en.wikipedia.org/wiki/Mount_Vesuvius"
+  },
+  {
+    "id": "mount-kenya",
+    "name": "Mount Kenya",
+    "wert": 5199,
+    "bild": "bilder/berge/mount-kenya.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Kenya"
+  },
+  {
+    "id": "aoraki",
+    "name": "Aoraki / Mount Cook",
+    "wert": 3724,
+    "bild": "bilder/berge/aoraki.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Aoraki_/_Mount_Cook"
+  },
+  {
+    "id": "annapurna",
+    "name": "Annapurna",
+    "wert": 8091,
+    "bild": "bilder/berge/annapurna.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Annapurna"
+  },
+  {
+    "id": "ortler",
+    "name": "Ortler",
+    "wert": 3905,
+    "bild": "bilder/berge/ortler.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Ortler"
+  },
+  {
+    "id": "wildspitze",
+    "name": "Wildspitze",
+    "wert": 3768,
+    "bild": "bilder/berge/wildspitze.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Wildspitze"
+  },
+  {
+    "id": "saentis",
+    "name": "Säntis",
+    "wert": 2502,
+    "bild": "bilder/berge/saentis.webp",
+    "quelle": "https://en.wikipedia.org/wiki/S%C3%A4ntis"
   }
 ]
