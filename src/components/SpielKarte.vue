@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import ZaehlZahl from './ZaehlZahl.vue'
 import { formatiereZahl } from '@/utils/format'
 
@@ -12,11 +13,20 @@ defineProps({
 })
 
 const emit = defineEmits(['raten'])
+
+// Bild erst einblenden, wenn es fertig geladen ist
+const geladen = ref(false)
 </script>
 
 <template>
-  <article class="karte">
-    <img :src="item.bild" :alt="item.name" class="bild" />
+  <article class="karte" :class="[rolle, rolle === 'rechts' ? ergebnis : null]">
+    <img
+      :src="item.bild"
+      :alt="item.name"
+      class="bild"
+      :class="{ geladen }"
+      @load="geladen = true"
+    />
 
     <div class="inhalt">
       <h2 class="name">„{{ item.name }}“</h2>
@@ -59,6 +69,7 @@ const emit = defineEmits(['raten'])
   position: relative;
   flex: 1 1 50%;
   min-width: 0;
+  min-height: 0;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -71,7 +82,14 @@ const emit = defineEmits(['raten'])
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: zoom 18s ease-in-out infinite alternate;
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 0.6s ease, transform 1.2s ease;
+}
+.bild.geladen {
+  opacity: 1;
+  transform: scale(1);
+  animation: zoom 18s 1.2s ease-in-out infinite alternate;
 }
 
 @keyframes zoom {
@@ -86,39 +104,63 @@ const emit = defineEmits(['raten'])
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, rgba(5, 5, 10, 0.35), rgba(5, 5, 10, 0.75)),
-    linear-gradient(to bottom, rgba(5, 5, 10, 0.5), transparent 30%);
+    radial-gradient(ellipse at center, rgba(5, 5, 10, 0.3), rgba(5, 5, 10, 0.78)),
+    linear-gradient(to bottom, rgba(5, 5, 10, 0.55), transparent 30%);
+}
+
+/* farbiges Leuchten bei richtig / falsch */
+.karte::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.karte.richtig::before {
+  opacity: 1;
+  background: radial-gradient(circle at center, rgba(46, 229, 157, 0.35), transparent 70%);
+  box-shadow: inset 0 0 0 4px rgba(46, 229, 157, 0.6);
+}
+.karte.falsch::before {
+  opacity: 1;
+  background: radial-gradient(circle at center, rgba(255, 84, 112, 0.35), transparent 70%);
+  box-shadow: inset 0 0 0 4px rgba(255, 84, 112, 0.6);
 }
 
 .inhalt {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 24px;
+  gap: clamp(4px, 1.3vh, 12px);
+  padding: clamp(16px, 3vw, 40px);
   text-align: center;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
 }
 
+/* Schriftgrößen wachsen mit Breite UND Höhe des Bildschirms (das Kleinere zählt) */
 .name {
-  font-size: clamp(2rem, 4.2vw, 3.6rem);
+  font-size: clamp(1.5rem, min(4.2vw, 7.5vh), 4.4rem);
   font-weight: 800;
   max-width: 14ch;
+  text-wrap: balance;
 }
 
 .text {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: clamp(0.9rem, min(1.35vw, 2.5vh), 1.35rem);
   color: var(--text-leise);
 }
 
 .wert {
-  margin: 4px 0;
+  margin: 0.1em 0;
   font-family: var(--schrift-titel);
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-size: clamp(2rem, min(6.2vw, 11vh), 6.2rem);
   font-weight: 800;
+  line-height: 1;
   color: var(--gelb);
   font-variant-numeric: tabular-nums;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -134,14 +176,14 @@ const emit = defineEmits(['raten'])
 .knoepfe {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin: 10px 0;
+  gap: clamp(8px, 1.4vh, 14px);
+  margin: clamp(4px, 1vh, 12px) 0;
 }
 
 .rate {
-  min-width: 210px;
-  font-size: 1.15rem;
-  padding: 0.9em 1.8em;
+  min-width: clamp(150px, 16vw, 250px);
+  font-size: clamp(0.95rem, min(1.35vw, 2.4vh), 1.3rem);
+  padding: 0.85em 1.8em;
   border-width: 2px;
   border-color: rgba(255, 255, 255, 0.55);
 }
@@ -151,33 +193,41 @@ const emit = defineEmits(['raten'])
 .rate.mehr:hover {
   border-color: var(--gruen);
   background: rgba(46, 229, 157, 0.18);
+  box-shadow: 0 0 30px -6px var(--gruen);
 }
 .rate.weniger:hover {
   border-color: var(--rot);
   background: rgba(255, 84, 112, 0.18);
+  box-shadow: 0 0 30px -6px var(--rot);
 }
 
-@media (max-width: 700px) {
-  .inhalt {
-    gap: 4px;
-    padding: 16px;
-  }
-  .name {
-    font-size: 1.8rem;
-  }
-  .text {
-    font-size: 0.95rem;
-  }
-  .wert {
-    font-size: 2.4rem;
-  }
+/* niedrige Bildschirme (Laptop, Handy quer): Knöpfe nebeneinander */
+@media (max-height: 560px) {
   .knoepfe {
     flex-direction: row;
-    margin: 6px 0;
   }
   .rate {
     min-width: 0;
-    font-size: 1rem;
+  }
+}
+
+/* Handy hochkant: jede Karte ist nur halb so hoch -> nach der Höhe skalieren */
+@media (max-width: 700px) {
+  .name {
+    font-size: clamp(1.3rem, 4.4vh, 2.4rem);
+  }
+  .text {
+    font-size: clamp(0.82rem, 1.9vh, 1.05rem);
+  }
+  .wert {
+    font-size: clamp(1.8rem, 6.4vh, 3.4rem);
+  }
+  .knoepfe {
+    flex-direction: row;
+  }
+  .rate {
+    min-width: 0;
+    font-size: clamp(0.9rem, 2vh, 1.05rem);
     padding: 0.75em 1.3em;
   }
 }
