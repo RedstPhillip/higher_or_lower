@@ -95,13 +95,18 @@ onUnmounted(() => {
   <main class="spiel">
     <header class="hud">
       <RouterLink to="/" class="btn zurueck">← <span>Kategorien</span></RouterLink>
-      <span v-if="store.kategorie && !isLoading" class="kategorie">
+      <span
+        v-if="store.kategorie && !isLoading"
+        class="kategorie"
+        :style="{ '--farbe': store.kategorie.farbe }"
+      >
         {{ store.kategorie.titel }}
       </span>
       <div class="stand">
         <div>
           <small>Punkte</small>
           <strong :key="store.punkte" class="pop">{{ store.punkte }}</strong>
+          <span v-if="store.punkte > 0" :key="'plus' + store.punkte" class="plus-eins">+1</span>
         </div>
         <div>
           <small>Rekord</small>
@@ -163,7 +168,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 18px 24px;
+  padding: clamp(12px, 2vh, 24px) clamp(12px, 2vw, 32px);
   pointer-events: none;
 }
 .hud > * {
@@ -179,6 +184,9 @@ onUnmounted(() => {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 8px 16px;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.45);
@@ -188,12 +196,21 @@ onUnmounted(() => {
   text-transform: uppercase;
   font-size: 0.8rem;
 }
+.kategorie::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--farbe);
+  box-shadow: 0 0 10px var(--farbe);
+}
 
 .stand {
   display: flex;
   gap: 8px;
 }
 .stand div {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,6 +240,28 @@ onUnmounted(() => {
   }
 }
 
+/* kleines "+1", das nach unten wegschwebt */
+.plus-eins {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  font-family: var(--schrift-titel);
+  font-weight: 800;
+  color: var(--gruen);
+  pointer-events: none;
+  animation: schweben 1s ease-out forwards;
+}
+@keyframes schweben {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -6px) scale(0.8);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 22px) scale(1.3);
+  }
+}
+
 .status {
   height: 100%;
   display: flex;
@@ -241,6 +280,20 @@ onUnmounted(() => {
 }
 .buehne {
   display: flex;
+}
+
+/* feine leuchtende Trennlinie zwischen den Karten */
+.buehne-rahmen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 4;
+  width: 2px;
+  translate: -50% 0;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.5), transparent);
+  pointer-events: none;
 }
 
 /* Karten-Wechsel: links raus, rechts rückt nach, neue kommt rein */
@@ -271,14 +324,14 @@ onUnmounted(() => {
   z-index: 5;
   display: grid;
   place-items: center;
-  width: 88px;
-  height: 88px;
+  width: clamp(60px, min(7vw, 12vh), 108px);
+  aspect-ratio: 1;
   border-radius: 50%;
   translate: -50% -50%;
   background: var(--text);
   color: var(--bg);
   font-family: var(--schrift-titel);
-  font-size: 1.6rem;
+  font-size: clamp(1.1rem, min(1.8vw, 3vh), 1.9rem);
   font-weight: 800;
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15), 0 10px 40px rgba(0, 0, 0, 0.5);
   transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -296,7 +349,7 @@ onUnmounted(() => {
 }
 .vs.richtig,
 .vs.falsch {
-  font-size: 2.4rem;
+  font-size: clamp(1.6rem, min(2.6vw, 4.4vh), 2.8rem);
 }
 
 @keyframes puls {
@@ -357,9 +410,18 @@ onUnmounted(() => {
   .karte-leave-to {
     transform: translateY(-100%);
   }
+  .buehne-rahmen::after {
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 2px;
+    translate: 0 -50%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  }
   .vs {
-    width: 64px;
-    height: 64px;
+    width: clamp(56px, 8vh, 72px);
     font-size: 1.2rem;
   }
   .vs.richtig,
