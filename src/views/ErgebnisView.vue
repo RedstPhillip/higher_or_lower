@@ -13,6 +13,22 @@ const neuerRekord = history.state?.neuerRekord === true
 
 const rekord = computed(() => store.highscores[store.kategorie?.id] || 0)
 
+// Rang je nach Punkten
+const raenge = [
+  { ab: 0, emoji: '🥔', titel: 'Kartoffel' },
+  { ab: 1, emoji: '🐣', titel: 'Küken' },
+  { ab: 3, emoji: '🧭', titel: 'Entdecker:in' },
+  { ab: 6, emoji: '🎓', titel: 'Profi' },
+  { ab: 10, emoji: '🧠', titel: 'Genie' },
+  { ab: 15, emoji: '👑', titel: 'Legende' }
+]
+const rang = computed(() => raenge.filter((r) => store.punkte >= r.ab).at(-1))
+
+// wie weit ist man vom Rekord entfernt? (0 bis 100 %)
+const fortschritt = computed(() =>
+  rekord.value === 0 ? 100 : Math.min((store.punkte / rekord.value) * 100, 100)
+)
+
 const spruch = computed(() => {
   const p = store.punkte
   if (p === 0) return 'Autsch – gleich die erste daneben.'
@@ -66,8 +82,14 @@ onUnmounted(() => window.removeEventListener('keydown', tasteGedrueckt))
       <p class="punkte-text">{{ store.punkte === 1 ? 'Punkt' : 'Punkte' }}</p>
 
       <p v-if="neuerRekord" class="badge rekord-neu">🏆 Neuer Rekord!</p>
-      <p v-else class="badge">Rekord: {{ rekord }}</p>
+      <div v-else class="balken-box">
+        <div class="balken"><div :style="{ width: fortschritt + '%' }"></div></div>
+        <small>{{ store.punkte }} / {{ rekord }} · Rekord</small>
+      </div>
 
+      <p class="rang">
+        <span>{{ rang.emoji }}</span> Rang: <strong>{{ rang.titel }}</strong>
+      </p>
       <p class="spruch">{{ spruch }}</p>
 
       <!-- woran ist man gescheitert? -->
@@ -132,7 +154,7 @@ onUnmounted(() => window.removeEventListener('keydown', tasteGedrueckt))
 
 .panel {
   width: min(560px, 100%);
-  padding: 40px 32px;
+  padding: clamp(28px, 5vh, 48px) clamp(20px, 4vw, 40px);
   border: 1px solid var(--linie);
   border-radius: 32px;
   background: rgba(11, 11, 18, 0.6);
@@ -159,7 +181,7 @@ onUnmounted(() => window.removeEventListener('keydown', tasteGedrueckt))
 
 .punkte {
   margin-top: 12px;
-  font-size: clamp(5rem, 22vw, 9rem);
+  font-size: clamp(4.5rem, min(22vw, 16vh), 9rem);
   font-weight: 800;
   background: linear-gradient(180deg, #fff 30%, var(--gelb));
   -webkit-background-clip: text;
@@ -194,8 +216,60 @@ onUnmounted(() => window.removeEventListener('keydown', tasteGedrueckt))
   }
 }
 
+/* Balken: wie nah am Rekord */
+.balken-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.balken {
+  width: min(260px, 80%);
+  height: 8px;
+  border-radius: 999px;
+  background: var(--glas);
+  overflow: hidden;
+}
+.balken div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--gruen), var(--gelb));
+  animation: fuellen 1.2s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes fuellen {
+  from {
+    width: 0;
+  }
+}
+.balken-box small {
+  color: var(--text-leise);
+}
+
+.rang {
+  margin: 22px 0 0;
+  font-size: 1.1rem;
+  color: var(--text-leise);
+}
+.rang strong {
+  color: var(--text);
+}
+.rang span {
+  display: inline-block;
+  font-size: 1.6rem;
+  vertical-align: middle;
+  animation: huepfen 1s 1.2s ease both;
+}
+@keyframes huepfen {
+  from {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.4);
+  }
+}
+
 .spruch {
-  margin: 20px 0 28px;
+  margin: 8px 0 28px;
   font-size: 1.15rem;
 }
 
@@ -318,9 +392,6 @@ onUnmounted(() => window.removeEventListener('keydown', tasteGedrueckt))
 }
 
 @media (max-width: 600px) {
-  .panel {
-    padding: 32px 20px;
-  }
   .fehler {
     flex-direction: column;
     gap: 6px;
