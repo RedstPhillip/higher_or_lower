@@ -7,12 +7,12 @@ SWP-Projekt der 4BWHII.
 
 ## Features
 
-- 4 Kategorien: **Städte** (Einwohner), **Berge** (Höhe), **Tiere** (Gewicht), **Suchanfragen** (Google-Suchen pro Monat)
+- 4 Kategorien mit je 25–30 Einträgen: **Städte** (Einwohner), **Berge** (Höhe), **Tiere** (Gewicht), **Suchanfragen** (Google-Suchen pro Monat)
 - Echte Bilder zu jedem Eintrag, animiertes Hochzählen der Zahlen, Karten-Animation beim Weiterkommen
 - Highscore pro Kategorie (bleibt im Browser gespeichert)
-- Ergebnisseite mit Verlauf der Runde und Konfetti bei neuem Rekord
+- Ergebnisseite mit Rang (🥔 bis 👑), Balken bis zum Rekord, Verlauf der Runde und Konfetti bei neuem Rekord
 - Steuerung mit Maus, Touch oder Pfeiltasten (↑ / ↓, Enter für „Nochmal“)
-- Funktioniert am Handy (Karten untereinander)
+- Skaliert vom Handy (Karten untereinander) über Laptop bis zum großen Monitor
 
 ## Starten
 
