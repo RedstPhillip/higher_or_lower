@@ -10,7 +10,7 @@
     "mehr": "Mehr",
     "weniger": "Weniger",
     "farbe": "#ffb547",
-    "cover": "/bilder/staedte/new-york.webp"
+    "cover": "bilder/staedte/new-york.webp"
   },
   {
     "id": "berge",
@@ -23,7 +23,7 @@
     "mehr": "Höher",
     "weniger": "Niedriger",
     "farbe": "#7cc4ff",
-    "cover": "/bilder/berge/matterhorn.webp"
+    "cover": "bilder/berge/matterhorn.webp"
   },
   {
     "id": "tiere",
@@ -36,7 +36,7 @@
     "mehr": "Schwerer",
     "weniger": "Leichter",
     "farbe": "#8ee07a",
-    "cover": "/bilder/tiere/tiger.webp"
+    "cover": "bilder/tiere/tiger.webp"
   },
   {
     "id": "suchanfragen",
@@ -49,6 +49,6 @@
     "mehr": "Öfter",
     "weniger": "Seltener",
     "farbe": "#ff7ab6",
-    "cover": "/bilder/suchanfragen/polarlicht.webp"
+    "cover": "bilder/suchanfragen/polarlicht.webp"
   }
 ]

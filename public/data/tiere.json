@@ -3,161 +3,161 @@
     "id": "blauwal",
     "name": "Blauwal",
     "wert": 150000,
-    "bild": "/bilder/tiere/blauwal.webp",
+    "bild": "bilder/tiere/blauwal.webp",
     "quelle": "https://en.wikipedia.org/wiki/Blue_whale"
   },
   {
     "id": "elefant",
     "name": "Afrikanischer Elefant",
     "wert": 6000,
-    "bild": "/bilder/tiere/elefant.webp",
+    "bild": "bilder/tiere/elefant.webp",
     "quelle": "https://en.wikipedia.org/wiki/African_bush_elephant"
   },
   {
     "id": "giraffe",
     "name": "Giraffe",
     "wert": 1200,
-    "bild": "/bilder/tiere/giraffe.webp",
+    "bild": "bilder/tiere/giraffe.webp",
     "quelle": "https://en.wikipedia.org/wiki/Giraffe"
   },
   {
     "id": "flusspferd",
     "name": "Flusspferd",
     "wert": 1500,
-    "bild": "/bilder/tiere/flusspferd.webp",
+    "bild": "bilder/tiere/flusspferd.webp",
     "quelle": "https://en.wikipedia.org/wiki/Hippopotamus"
   },
   {
     "id": "eisbaer",
     "name": "Eisbär",
     "wert": 450,
-    "bild": "/bilder/tiere/eisbaer.webp",
+    "bild": "bilder/tiere/eisbaer.webp",
     "quelle": "https://en.wikipedia.org/wiki/Polar_bear"
   },
   {
     "id": "loewe",
     "name": "Löwe",
     "wert": 190,
-    "bild": "/bilder/tiere/loewe.webp",
+    "bild": "bilder/tiere/loewe.webp",
     "quelle": "https://en.wikipedia.org/wiki/Lion"
   },
   {
     "id": "tiger",
     "name": "Tiger",
     "wert": 220,
-    "bild": "/bilder/tiere/tiger.webp",
+    "bild": "bilder/tiere/tiger.webp",
     "quelle": "https://en.wikipedia.org/wiki/Tiger"
   },
   {
     "id": "gorilla",
     "name": "Gorilla",
     "wert": 160,
-    "bild": "/bilder/tiere/gorilla.webp",
+    "bild": "bilder/tiere/gorilla.webp",
     "quelle": "https://en.wikipedia.org/wiki/Western_gorilla"
   },
   {
     "id": "pferd",
     "name": "Pferd",
     "wert": 500,
-    "bild": "/bilder/tiere/pferd.webp",
+    "bild": "bilder/tiere/pferd.webp",
     "quelle": "https://en.wikipedia.org/wiki/Horse"
   },
   {
     "id": "strauss",
     "name": "Strauß",
     "wert": 120,
-    "bild": "/bilder/tiere/strauss.webp",
+    "bild": "bilder/tiere/strauss.webp",
     "quelle": "https://en.wikipedia.org/wiki/Common_ostrich"
   },
   {
     "id": "kaenguru",
     "name": "Rotes Riesenkänguru",
     "wert": 85,
-    "bild": "/bilder/tiere/kaenguru.webp",
+    "bild": "bilder/tiere/kaenguru.webp",
     "quelle": "https://en.wikipedia.org/wiki/Red_kangaroo"
   },
   {
     "id": "kaiserpinguin",
     "name": "Kaiserpinguin",
     "wert": 30,
-    "bild": "/bilder/tiere/kaiserpinguin.webp",
+    "bild": "bilder/tiere/kaiserpinguin.webp",
     "quelle": "https://en.wikipedia.org/wiki/Emperor_penguin"
   },
   {
     "id": "katze",
     "name": "Hauskatze",
     "wert": 4.5,
-    "bild": "/bilder/tiere/katze.webp",
+    "bild": "bilder/tiere/katze.webp",
     "quelle": "https://en.wikipedia.org/wiki/Cat"
   },
   {
     "id": "koala",
     "name": "Koala",
     "wert": 9,
-    "bild": "/bilder/tiere/koala.webp",
+    "bild": "bilder/tiere/koala.webp",
     "quelle": "https://en.wikipedia.org/wiki/Koala"
   },
   {
     "id": "panda",
     "name": "Großer Panda",
     "wert": 110,
-    "bild": "/bilder/tiere/panda.webp",
+    "bild": "bilder/tiere/panda.webp",
     "quelle": "https://en.wikipedia.org/wiki/Giant_panda"
   },
   {
     "id": "krokodil",
     "name": "Leistenkrokodil",
     "wert": 520,
-    "bild": "/bilder/tiere/krokodil.webp",
+    "bild": "bilder/tiere/krokodil.webp",
     "quelle": "https://en.wikipedia.org/wiki/Saltwater_crocodile"
   },
   {
     "id": "orca",
     "name": "Orca",
     "wert": 5000,
-    "bild": "/bilder/tiere/orca.webp",
+    "bild": "bilder/tiere/orca.webp",
     "quelle": "https://en.wikipedia.org/wiki/Orca"
   },
   {
     "id": "nashorn",
     "name": "Breitmaulnashorn",
     "wert": 2300,
-    "bild": "/bilder/tiere/nashorn.webp",
+    "bild": "bilder/tiere/nashorn.webp",
     "quelle": "https://en.wikipedia.org/wiki/White_rhinoceros"
   },
   {
     "id": "weisser-hai",
     "name": "Weißer Hai",
     "wert": 1100,
-    "bild": "/bilder/tiere/weisser-hai.webp",
+    "bild": "bilder/tiere/weisser-hai.webp",
     "quelle": "https://en.wikipedia.org/wiki/Great_white_shark"
   },
   {
     "id": "faultier",
     "name": "Faultier",
     "wert": 4,
-    "bild": "/bilder/tiere/faultier.webp",
+    "bild": "bilder/tiere/faultier.webp",
     "quelle": "https://en.wikipedia.org/wiki/Brown-throated_sloth"
   },
   {
     "id": "golden-retriever",
     "name": "Golden Retriever",
     "wert": 32,
-    "bild": "/bilder/tiere/golden-retriever.webp",
+    "bild": "bilder/tiere/golden-retriever.webp",
     "quelle": "https://en.wikipedia.org/wiki/Golden_Retriever"
   },
   {
     "id": "kuh",
     "name": "Kuh",
     "wert": 650,
-    "bild": "/bilder/tiere/kuh.webp",
+    "bild": "bilder/tiere/kuh.webp",
     "quelle": "https://en.wikipedia.org/wiki/Cattle"
   },
   {
     "id": "braunbaer",
     "name": "Braunbär",
     "wert": 300,
-    "bild": "/bilder/tiere/braunbaer.webp",
+    "bild": "bilder/tiere/braunbaer.webp",
     "quelle": "https://en.wikipedia.org/wiki/Brown_bear"
   }
 ]
