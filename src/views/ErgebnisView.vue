@@ -117,6 +117,7 @@ onUnmounted(() => window.removeEventListener('keydown', tasteGedrueckt))
   gap: 32px;
   padding: 48px 16px;
   overflow: hidden;
+  isolation: isolate; /* damit das Hintergrundbild (z-index: -1) sichtbar bleibt */
 }
 
 .hintergrund {

@@ -98,7 +98,7 @@ function spielen(kategorie) {
   padding: 64px 24px 40px;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
+  isolation: isolate;
 }
 
 /* weiche Farbflecken im Hintergrund */
