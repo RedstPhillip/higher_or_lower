@@ -21,13 +21,6 @@
     "quelle": "https://en.wikipedia.org/wiki/Salzburg"
   },
   {
-    "id": "innsbruck",
-    "name": "Innsbruck",
-    "wert": 132493,
-    "bild": "bilder/staedte/innsbruck.webp",
-    "quelle": "https://en.wikipedia.org/wiki/Innsbruck"
-  },
-  {
     "id": "linz",
     "name": "Linz",
     "wert": 211000,
