@@ -1,0 +1,135 @@
+[
+  {
+    "id": "everest",
+    "name": "Mount Everest",
+    "wert": 8849,
+    "bild": "/bilder/berge/everest.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Everest"
+  },
+  {
+    "id": "k2",
+    "name": "K2",
+    "wert": 8611,
+    "bild": "/bilder/berge/k2.webp",
+    "quelle": "https://en.wikipedia.org/wiki/K2"
+  },
+  {
+    "id": "kangchendzoenga",
+    "name": "Kangchendzönga",
+    "wert": 8586,
+    "bild": "/bilder/berge/kangchendzoenga.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Kangchenjunga"
+  },
+  {
+    "id": "mont-blanc",
+    "name": "Mont Blanc",
+    "wert": 4806,
+    "bild": "/bilder/berge/mont-blanc.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mont_Blanc"
+  },
+  {
+    "id": "matterhorn",
+    "name": "Matterhorn",
+    "wert": 4478,
+    "bild": "/bilder/berge/matterhorn.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Matterhorn"
+  },
+  {
+    "id": "grossglockner",
+    "name": "Großglockner",
+    "wert": 3798,
+    "bild": "/bilder/berge/grossglockner.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Grossglockner"
+  },
+  {
+    "id": "zugspitze",
+    "name": "Zugspitze",
+    "wert": 2962,
+    "bild": "/bilder/berge/zugspitze.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Zugspitze"
+  },
+  {
+    "id": "kilimandscharo",
+    "name": "Kilimandscharo",
+    "wert": 5895,
+    "bild": "/bilder/berge/kilimandscharo.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Kilimanjaro"
+  },
+  {
+    "id": "denali",
+    "name": "Denali",
+    "wert": 6190,
+    "bild": "/bilder/berge/denali.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Denali"
+  },
+  {
+    "id": "aconcagua",
+    "name": "Aconcagua",
+    "wert": 6961,
+    "bild": "/bilder/berge/aconcagua.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Aconcagua"
+  },
+  {
+    "id": "fuji",
+    "name": "Fuji",
+    "wert": 3776,
+    "bild": "/bilder/berge/fuji.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Fuji"
+  },
+  {
+    "id": "aetna",
+    "name": "Ätna",
+    "wert": 3403,
+    "bild": "/bilder/berge/aetna.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Etna"
+  },
+  {
+    "id": "kosciuszko",
+    "name": "Mount Kosciuszko",
+    "wert": 2228,
+    "bild": "/bilder/berge/kosciuszko.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Kosciuszko"
+  },
+  {
+    "id": "elbrus",
+    "name": "Elbrus",
+    "wert": 5642,
+    "bild": "/bilder/berge/elbrus.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Elbrus"
+  },
+  {
+    "id": "rainier",
+    "name": "Mount Rainier",
+    "wert": 4392,
+    "bild": "/bilder/berge/rainier.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Rainier"
+  },
+  {
+    "id": "tafelberg",
+    "name": "Tafelberg",
+    "wert": 1085,
+    "bild": "/bilder/berge/tafelberg.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Table_Mountain"
+  },
+  {
+    "id": "dachstein",
+    "name": "Dachstein",
+    "wert": 2995,
+    "bild": "/bilder/berge/dachstein.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Hoher_Dachstein"
+  },
+  {
+    "id": "ben-nevis",
+    "name": "Ben Nevis",
+    "wert": 1345,
+    "bild": "/bilder/berge/ben-nevis.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Ben_Nevis"
+  },
+  {
+    "id": "vesuv",
+    "name": "Vesuv",
+    "wert": 1281,
+    "bild": "/bilder/berge/vesuv.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Mount_Vesuvius"
+  }
+]
