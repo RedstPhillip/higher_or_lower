@@ -1,0 +1,156 @@
+[
+  {
+    "id": "wetter",
+    "name": "Wetter",
+    "wert": 2240000,
+    "bild": "/bilder/suchanfragen/wetter.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Weather"
+  },
+  {
+    "id": "pizza",
+    "name": "Pizza",
+    "wert": 301000,
+    "bild": "/bilder/suchanfragen/pizza.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Pizza"
+  },
+  {
+    "id": "sushi",
+    "name": "Sushi",
+    "wert": 135000,
+    "bild": "/bilder/suchanfragen/sushi.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Sushi"
+  },
+  {
+    "id": "doener",
+    "name": "Döner",
+    "wert": 90500,
+    "bild": "/bilder/suchanfragen/doener.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Doner_kebab"
+  },
+  {
+    "id": "kaffee",
+    "name": "Kaffee",
+    "wert": 74000,
+    "bild": "/bilder/suchanfragen/kaffee.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Coffee"
+  },
+  {
+    "id": "bier",
+    "name": "Bier",
+    "wert": 60500,
+    "bild": "/bilder/suchanfragen/bier.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Beer"
+  },
+  {
+    "id": "hund",
+    "name": "Hund",
+    "wert": 110000,
+    "bild": "/bilder/suchanfragen/hund.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Dog"
+  },
+  {
+    "id": "fussball",
+    "name": "Fußball",
+    "wert": 246000,
+    "bild": "/bilder/suchanfragen/fussball.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Ball_(association_football)"
+  },
+  {
+    "id": "schach",
+    "name": "Schach",
+    "wert": 49500,
+    "bild": "/bilder/suchanfragen/schach.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Chess"
+  },
+  {
+    "id": "christbaum",
+    "name": "Christbaum",
+    "wert": 40500,
+    "bild": "/bilder/suchanfragen/christbaum.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Christmas_tree"
+  },
+  {
+    "id": "mond",
+    "name": "Mond",
+    "wert": 33100,
+    "bild": "/bilder/suchanfragen/mond.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Moon"
+  },
+  {
+    "id": "eiffelturm",
+    "name": "Eiffelturm",
+    "wert": 27100,
+    "bild": "/bilder/suchanfragen/eiffelturm.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+  },
+  {
+    "id": "achterbahn",
+    "name": "Achterbahn",
+    "wert": 14800,
+    "bild": "/bilder/suchanfragen/achterbahn.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Roller_coaster"
+  },
+  {
+    "id": "sauna",
+    "name": "Sauna",
+    "wert": 165000,
+    "bild": "/bilder/suchanfragen/sauna.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Sauna"
+  },
+  {
+    "id": "heissluftballon",
+    "name": "Heißluftballon",
+    "wert": 12100,
+    "bild": "/bilder/suchanfragen/heissluftballon.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Hot_air_balloon"
+  },
+  {
+    "id": "pyramiden",
+    "name": "Pyramiden von Gizeh",
+    "wert": 22200,
+    "bild": "/bilder/suchanfragen/pyramiden.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Giza_pyramid_complex"
+  },
+  {
+    "id": "schnitzel",
+    "name": "Wiener Schnitzel",
+    "wert": 55800,
+    "bild": "/bilder/suchanfragen/schnitzel.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Wiener_schnitzel"
+  },
+  {
+    "id": "mozart",
+    "name": "Mozart",
+    "wert": 44900,
+    "bild": "/bilder/suchanfragen/mozart.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+  },
+  {
+    "id": "tennis",
+    "name": "Tennis",
+    "wert": 81000,
+    "bild": "/bilder/suchanfragen/tennis.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Tennis_ball"
+  },
+  {
+    "id": "sonnenfinsternis",
+    "name": "Sonnenfinsternis",
+    "wert": 201000,
+    "bild": "/bilder/suchanfragen/sonnenfinsternis.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Solar_eclipse"
+  },
+  {
+    "id": "polarlicht",
+    "name": "Polarlicht",
+    "wert": 368000,
+    "bild": "/bilder/suchanfragen/polarlicht.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Aurora"
+  },
+  {
+    "id": "schwimmbad",
+    "name": "Schwimmbad",
+    "wert": 27800,
+    "bild": "/bilder/suchanfragen/schwimmbad.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Swimming_pool"
+  }
+]
