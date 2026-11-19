@@ -1,0 +1,67 @@
+[
+  {
+    "id": "staedte",
+    "titel": "Städte",
+    "beschreibung": "Welche Stadt hat mehr Einwohner?",
+    "verb": "hat",
+    "einheit": "Einwoner",
+    "frageVor": "hat",
+    "frageNach": "Einwoner als",
+    "mehr": "Mehr",
+    "weniger": "Weniger",
+    "farbe": "#ffb547",
+    "cover": "/bilder/staedte/new-york.webp"
+  },
+  {
+    "id": "berge",
+    "titel": "Berge",
+    "beschreibung": "Welcher Gipfel ragt höher in den Himmel?",
+    "verb": "ist",
+    "einheit": "Meter hoch",
+    "frageVor": "ist",
+    "frageNach": "als",
+    "mehr": "Höher",
+    "weniger": "Niedriger",
+    "farbe": "#7cc4ff",
+    "cover": "/bilder/berge/matterhorn.webp"
+  },
+  {
+    "id": "tiere",
+    "titel": "Tiere",
+    "beschreibung": "Wer bringt mehr Kilos auf die Waage?",
+    "verb": "wiegt",
+    "einheit": "Kilogramm",
+    "frageVor": "ist",
+    "frageNach": "als",
+    "mehr": "Schwerer",
+    "weniger": "Leichter",
+    "farbe": "#8ee07a",
+    "cover": "/bilder/tiere/tiger.webp"
+  },
+  {
+    "id": "suchanfragen",
+    "titel": "Suchanfragen",
+    "beschreibung": "Was wird öfter gegoogelt?",
+    "verb": "wird",
+    "einheit": "mal im Monat gesucht",
+    "frageVor": "wird",
+    "frageNach": "gesucht als",
+    "mehr": "Öfter",
+    "weniger": "Seltener",
+    "farbe": "#ff7ab6",
+    "cover": "/bilder/suchanfragen/polarlicht.webp"
+  },
+  {
+    "id": "gemischt",
+    "titel": "Gemischt",
+    "beschreibung": "Von allem etwas!",
+    "verb": "hat",
+    "einheit": "",
+    "frageVor": "hat",
+    "frageNach": "als",
+    "mehr": "Mehr",
+    "weniger": "Weniger",
+    "farbe": "#c9a7ff",
+    "cover": "/bilder/tiere/orca.webp"
+  }
+]
