@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background: #111118;
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  border-top-color: #ffd23f;
+  animation: drehen 0.8s linear infinite;
+}
+
+@keyframes drehen {
+  to {
+    transform: rotate(360deg);
+  }
+}
