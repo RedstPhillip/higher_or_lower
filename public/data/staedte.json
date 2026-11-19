@@ -1,0 +1,156 @@
+[
+  {
+    "id": "wien",
+    "name": "Wien",
+    "wert": 205760,
+    "bild": "/bilder/staedte/wien.webp",
+    "quelle": "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna"
+  },
+  {
+    "id": "graz",
+    "name": "Graz",
+    "wert": 305314,
+    "bild": "/bilder/staedte/graz.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Graz"
+  },
+  {
+    "id": "salzburg",
+    "name": "Salzburg",
+    "wert": 157652,
+    "bild": "/bilder/staedte/salzburg.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Salzburg"
+  },
+  {
+    "id": "innsbruck",
+    "name": "Innsbruck",
+    "wert": 132493,
+    "bild": "/bilder/staedte/innsbruck.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Innsbruck"
+  },
+  {
+    "id": "linz",
+    "name": "Linz",
+    "wert": 211000,
+    "bild": "/bilder/staedte/linz.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Linz"
+  },
+  {
+    "id": "berlin",
+    "name": "Berlin",
+    "wert": 3878100,
+    "bild": "/bilder/staedte/berlin.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Berlin"
+  },
+  {
+    "id": "hamburg",
+    "name": "Hamburg",
+    "wert": 1891810,
+    "bild": "/bilder/staedte/hamburg.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Hamburg"
+  },
+  {
+    "id": "muenchen",
+    "name": "München",
+    "wert": 1510378,
+    "bild": "/bilder/staedte/muenchen.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Munich"
+  },
+  {
+    "id": "paris",
+    "name": "Paris",
+    "wert": 2102650,
+    "bild": "/bilder/staedte/paris.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Paris"
+  },
+  {
+    "id": "london",
+    "name": "London",
+    "wert": 8866000,
+    "bild": "/bilder/staedte/london.webp",
+    "quelle": "https://en.wikipedia.org/wiki/London"
+  },
+  {
+    "id": "rom",
+    "name": "Rom",
+    "wert": 2748109,
+    "bild": "/bilder/staedte/rom.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Rome"
+  },
+  {
+    "id": "new-york",
+    "name": "New York",
+    "wert": 8258035,
+    "bild": "/bilder/staedte/new-york.webp",
+    "quelle": "https://en.wikipedia.org/wiki/New_York_City"
+  },
+  {
+    "id": "tokio",
+    "name": "Tokio",
+    "wert": 14187176,
+    "bild": "/bilder/staedte/tokio.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Tokyo"
+  },
+  {
+    "id": "sydney",
+    "name": "Sydney",
+    "wert": 5450496,
+    "bild": "/bilder/staedte/sydney.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Sydney"
+  },
+  {
+    "id": "rio",
+    "name": "Rio de Janeiro",
+    "wert": 6211223,
+    "bild": "/bilder/staedte/rio.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Rio_de_Janeiro"
+  },
+  {
+    "id": "kairo",
+    "name": "Kairo",
+    "wert": 10230350,
+    "bild": "/bilder/staedte/kairo.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Cairo"
+  },
+  {
+    "id": "zuerich",
+    "name": "Zürich",
+    "wert": 427000,
+    "bild": "/bilder/staedte/zuerich.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Zurich"
+  },
+  {
+    "id": "barcelona",
+    "name": "Barcelona",
+    "wert": 1660314,
+    "bild": "/bilder/staedte/barcelona.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Barcelona"
+  },
+  {
+    "id": "istanbul",
+    "name": "Istanbul",
+    "wert": 15655924,
+    "bild": "/bilder/staedte/istanbul.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Istanbul"
+  },
+  {
+    "id": "amsterdam",
+    "name": "Amsterdam",
+    "wert": 931298,
+    "bild": "/bilder/staedte/amsterdam.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Amsterdam"
+  },
+  {
+    "id": "prag",
+    "name": "Prag",
+    "wert": 1357326,
+    "bild": "/bilder/staedte/prag.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Prague"
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "wert": 3604030,
+    "bild": "/bilder/staedte/dubai.webp",
+    "quelle": "https://en.wikipedia.org/wiki/Dubai"
+  }
+]
