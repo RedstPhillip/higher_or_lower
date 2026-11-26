@@ -50,18 +50,5 @@
     "weniger": "Seltener",
     "farbe": "#ff7ab6",
     "cover": "/bilder/suchanfragen/polarlicht.webp"
-  },
-  {
-    "id": "gemischt",
-    "titel": "Gemischt",
-    "beschreibung": "Von allem etwas!",
-    "verb": "hat",
-    "einheit": "",
-    "frageVor": "hat",
-    "frageNach": "als",
-    "mehr": "Mehr",
-    "weniger": "Weniger",
-    "farbe": "#c9a7ff",
-    "cover": "/bilder/tiere/orca.webp"
   }
 ]
