@@ -1,4 +1,6 @@
 <script setup>
+import { formatiereZahl } from '@/utils/format'
+
 defineProps({
   item: { type: Object, required: true },
   kategorie: { type: Object, required: true },
@@ -17,7 +19,7 @@ const emit = defineEmits(['raten'])
 
       <template v-if="rolle === 'links' || aufgedeckt">
         <p>{{ kategorie.verb }}</p>
-        <p class="wert">{{ item.wert }}</p>
+        <p class="wert">{{ formatiereZahl(item.wert) }}</p>
         <p>{{ kategorie.einheit }}</p>
       </template>
 
