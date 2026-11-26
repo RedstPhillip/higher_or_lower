@@ -36,7 +36,6 @@ async function laden() {
 
     const items = await ladeItems(kategorie.id)
     items.forEach((item) => (new Image().src = item.bild)) // Bilder vorladen
-    console.log('geladen', items)
     store.starten(kategorie, items)
   } catch (error) {
     console.error('Fehler beim Laden:', error)
