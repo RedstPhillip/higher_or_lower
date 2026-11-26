@@ -13,6 +13,7 @@ function mischen(liste) {
 
 export const useSpielStore = defineStore('spiel', () => {
   const kategorie = ref(null)
+  const alleItems = ref([]) // alle Items der Kategorie
   const stapel = ref([]) // Items, die noch kommen
   const links = ref(null) // Item mit bekanntem Wert
   const rechts = ref(null) // Item, das geraten wird
@@ -21,6 +22,7 @@ export const useSpielStore = defineStore('spiel', () => {
 
   function starten(neueKategorie, items) {
     kategorie.value = neueKategorie
+    alleItems.value = items
     stapel.value = mischen(items)
     links.value = stapel.value.pop()
     rechts.value = stapel.value.pop()
@@ -39,7 +41,16 @@ export const useSpielStore = defineStore('spiel', () => {
   function weiter() {
     punkte.value++
     verlauf.value.push(rechts.value)
+
+    const vorher = links.value
     links.value = rechts.value
+
+    // Stapel leer? -> neu mischen (ohne die zwei Items, die gerade sichtbar sind)
+    if (stapel.value.length === 0) {
+      stapel.value = mischen(
+        alleItems.value.filter((i) => i.id !== links.value.id && i.id !== vorher.id)
+      )
+    }
     rechts.value = stapel.value.pop()
   }
 
