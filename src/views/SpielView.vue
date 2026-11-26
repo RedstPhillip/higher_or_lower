@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import { ladeKategorien, ladeItems } from '@/services/api'
 import { useSpielStore } from '@/stores/spielStore'
@@ -42,6 +42,14 @@ function raten(tipp) {
     }
   }, 1500)
 }
+// Steuerung mit den Pfeiltasten
+function tasteGedrueckt(event) {
+  if (event.key === 'ArrowUp') raten('mehr')
+  if (event.key === 'ArrowDown') raten('weniger')
+}
+
+onMounted(() => window.addEventListener('keydown', tasteGedrueckt))
+onUnmounted(() => window.removeEventListener('keydown', tasteGedrueckt))
 </script>
 
 <template>
